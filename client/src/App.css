@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+/* Main container */
+.container {
+  font-family: 'Quicksand', sans-serif;
+  max-width: 25rem;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.border-div {
+  border-top: 1px solid #edeeff;
+  margin: 0.2rem 0.15rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  margin: 1rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.logo-small {
+  /* font-family: 'Quicksand', sans-serif; */
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+}
+
+/* Pokemon Card */
+.pokemon-card {
+  background-color: #7275a0;
+  color: #f0f0f0;
+  border-radius: 0.5rem;
+  border: 0.75rem solid #edeeff;
+  padding: 0.5rem;
+  box-shadow: 0.25px 0.25px 1px #333333;
+  display: inline-block;
+  margin-top: 2rem;
+  text-align: center;
+
+  width: 14rem;
+  height: 20rem;
+}
+
+.pokemon-card-name {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+}
+
+/* Pokemon Title */
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  color: #333333;
+}
+
+/* Pokemon List */
+ul {
+  font-family: 'Bebas Neue', cursive;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li {
+  background-color: #edeeff;
+  flex: 0 0 calc(33.3333% - 0.5rem);
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0.25px 0.25px 1px #333333;
+}
+
+li:hover {
+  background-color: #dbddff;
+}
+
+/* Buttons */
+button {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #edeeff;
+  color: #333333;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  margin: 0.25rem;
+  flex: 0 0 calc(50% - 0.5rem);
+  box-shadow: 0.25px 0.25px 1px #333333;
+}
+
+button:hover {
+  background-color: #dbddff;
+}
+
+.prev-next-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Pokemon Image */
+img {
+  width: 9rem;
+  height: 9rem;
+  display: block;
+  padding: 0 2rem;
+  margin: 0.25rem auto 0.25rem;
+  background-color: #edeeff;
+  /* border-radius: 0.5rem; */
+}
+
+/* Pokemon Details */
+.pokemon-card > div {
+  /* margin-bottom: 10px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Type and Abilities */
+.pokemon-card-type {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.pokemon-card-id {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 0.8rem;
+}
+
+.pokemon-card-stats-detail-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 0.65rem;
+}
+
+.pokemon-card-stats-header {
+  margin-bottom: 0.2rem;
+}
+
+.pokemon-card-stats-detail {
+  font-family: 'Quicksand', cursive;
+  font-size: 0.5rem;
 }
