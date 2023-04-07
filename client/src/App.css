@@ -64,7 +64,8 @@ ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: start;
 }
 
 li {
@@ -146,4 +147,15 @@ img {
 .pokemon-card-stats-detail {
   font-family: 'Quicksand', cursive;
   font-size: 0.5rem;
+}
+
+.search-box {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 1rem 0.25rem;
+  width: max-content;
+  box-shadow: 0.25px 0.25px 1px #333333;
 }
