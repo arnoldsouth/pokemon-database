@@ -6,6 +6,7 @@ const getPokemonList = async (req, res) => {
     const limit = req.query.limit || 20
     const response = await axios.get(
       `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+      // `https://pokeapi.co/api/v2/pokemon?limit=1118`
     )
     res.json(response.data)
   } catch (error) {

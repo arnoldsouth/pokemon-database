@@ -155,7 +155,7 @@ img {
   border: none;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
-  margin: 1rem 0.25rem;
+  margin: 1.25rem 0.25rem 0rem;
   width: max-content;
   box-shadow: 0.25px 0.25px 1px #333333;
 }

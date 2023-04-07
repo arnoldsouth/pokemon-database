@@ -18,7 +18,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
   const [suggestions, setSuggestions] = useState([])
 
-  const limit = 9
+  const limit = 5000
 
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -80,31 +80,6 @@ function App() {
     <div className="container">
       <div className="logo">
         <div className="logo-small">pokemon</div>DATABASE
-      </div>
-
-      <ul>
-        {pokemon.map((p) => (
-          <li key={p.name} onClick={() => handlePokemonClick(p.name)}>
-            {p.name}
-          </li>
-        ))}
-      </ul>
-
-      <div className="prev-next-button">
-        <button onClick={handlePrevClick}>Previous</button>
-        <button onClick={handleNextClick}>Next</button>
-      </div>
-
-      <div>
-        <Autosuggest
-          suggestions={suggestions}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-          onSuggestionsClearRequested={onSuggestionsClearRequested}
-          getSuggestionValue={getSuggestionValue}
-          renderSuggestion={renderSuggestion}
-          onSuggestionSelected={onSuggestionSelected}
-          inputProps={inputProps}
-        />
       </div>
 
       <div className="card-container">
@@ -221,6 +196,31 @@ function App() {
             </div>
           </div>
         )}
+      </div>
+
+      <div>
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={onSuggestionsClearRequested}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          onSuggestionSelected={onSuggestionSelected}
+          inputProps={inputProps}
+        />
+      </div>
+
+      <ul>
+        {pokemon.map((p) => (
+          <li key={p.name} onClick={() => handlePokemonClick(p.name)}>
+            {p.name}
+          </li>
+        ))}
+      </ul>
+
+      <div className="prev-next-button">
+        <button onClick={handlePrevClick}>Previous</button>
+        <button onClick={handleNextClick}>Next</button>
       </div>
     </div>
   )
