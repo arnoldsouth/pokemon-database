@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 const {
-  getPokemonList,
-  getPokemonData,
+    getPokemonList,
+    getPokemonData,
 } = require('../controllers/pokemonControllers')
 
 router.route('/pokemon').get(getPokemonList)
