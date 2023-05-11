@@ -3,6 +3,12 @@ const app = express()
 const cors = require('cors')
 const axios = require('axios')
 
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+
+const https = require('https')
+const http = require('http')
+
 const pokemonRoutes = require('./routes/pokemonRoutes')
 
 const port = process.env.PORT || 5000
