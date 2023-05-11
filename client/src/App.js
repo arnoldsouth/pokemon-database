@@ -28,6 +28,7 @@ function App() {
             // )
 
             // Axios fetch to the serverless function that is deployed on Vercel and accessed via HTTP request
+            // https://pokemon-database-card.vercel.app/api/getPokemonList
             const response = await axios.get(
                 `https://pokemon-database-card.vercel.app/api/getPokemonList?offset=${offset}&limit=${limit}&search=${searchTerm}`
             )
@@ -41,6 +42,7 @@ function App() {
         // const response = await axios.get(`/api/pokemon/${name}`)
 
         // Axios fetch to the serverless function that is deployed on Vercel
+        // https://pokemon-database-card.vercel.app/api/getPokemonData?name=pikachu
         const response = await axios.get(
             `https://pokemon-database-card.vercel.app/api/getPokemonData?name=${name}`
         )
