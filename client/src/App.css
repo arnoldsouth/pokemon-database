@@ -16,6 +16,11 @@
   margin: 0.2rem 0.15rem;
 }
 
+.section-break-div {
+  border-top: 1px solid #dbddff;
+  margin: 1rem 0rem;
+}
+
 .logo {
   margin: 1rem;
   font-family: 'Bebas Neue', cursive;

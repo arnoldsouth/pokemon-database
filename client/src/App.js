@@ -210,6 +210,8 @@ function App() {
         />
       </div>
 
+      <div className="section-break-div" />
+
       <ul>
         {pokemon.map((p) => (
           <li key={p.name} onClick={() => handlePokemonClick(p.name)}>
