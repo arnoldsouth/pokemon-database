@@ -1,4 +1,9 @@
+// `api/getPokemonList.js`
+
 const axios = require('axios')
+
+// Exported as the default export of a module named getPokemonList.js in the `api` directory
+// This `getPokemonList` module defines a serverless function that is deployed on Vercel and accessed via HTTP request
 
 module.exports = async (req, res) => {
     try {

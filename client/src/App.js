@@ -27,6 +27,7 @@ function App() {
             //     `/api/pokemon?offset=${offset}&limit=${limit}&search=${searchTerm}`
             // )
 
+            // Axios fetch to the serverless function that is deployed on Vercel and accessed via HTTP request
             const response = await axios.get(
                 `https://pokemon-database-card.vercel.app/api/getPokemonList?offset=${offset}&limit=${limit}&search=${searchTerm}`
             )
@@ -36,7 +37,13 @@ function App() {
     }, [offset, searchTerm])
 
     const handlePokemonClick = async (name) => {
-        const response = await axios.get(`/api/pokemon/${name}`)
+        // Axios fetch to the back end server
+        // const response = await axios.get(`/api/pokemon/${name}`)
+
+        // Axios fetch to the serverless function that is deployed on Vercel
+        const response = await axios.get(
+            `https://pokemon-database-card.vercel.app/api/getPokemonData?name=${name}`
+        )
         setSelectedPokemon(response.data)
     }
 
