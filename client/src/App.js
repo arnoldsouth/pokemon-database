@@ -28,7 +28,7 @@ function App() {
             // )
 
             const response = await axios.get(
-                `https://pokemon-database-card.vercel.app/api/getPokemonList?offset=${offset}&limit=${limit}&search=${searchTerm}`
+                `https://pokemon-database-card.vercel.app/api/getPokemonList`
             )
             setPokemon(response.data.results)
         }
